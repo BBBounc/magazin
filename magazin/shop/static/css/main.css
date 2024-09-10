@@ -1,0 +1,44 @@
+body,li,ul,section,nav,header,footer{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #AC66D5;
+}
+li{
+    list-style-type: none;
+}
+.violet_dark{
+    color: #47036F;
+}
+.violet_da{
+    color: #6F0AAA;
+}
+.violet_d{
+    color: #5E2580;
+}
+.violet_mi{
+    color: #9D3ED5;
+}
+.violet_mig{
+    color: #AC66D5;
+}
+h1{
+    font-size: 36px;
+    color:white;
+}
+p{
+    font-size: 24px;
+}
+.container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.container div {
+    width: 50%; 
+}
+.align_center{
+    text-align: center;
+    max-width: 500px;
+}
