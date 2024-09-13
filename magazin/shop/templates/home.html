@@ -6,17 +6,14 @@
 {% block content %}
 <section class="container">
     <div>
-
-    </div>
-    <div>
         <h1 class="align_center">Привет, это мой сайт</h1>
         <p class="align_center">Данный сайт рассматривайте как мою визитку</p>
     </div>
 </section>
-<h1>Наши Услуги</h1>
-<ul>
+<h1 class="align_center">Мои услуги</h1>
+<ul class="content_main_page">
     {% for service in services %}
-        <li>
+        <li class="content_main_page_li">
             <h2>{{ service.title }}</h2>
             <p>{{ service.description }}</p>
             <p>Price: {{ service.price }}</p>

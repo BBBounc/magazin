@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,25 @@
         {% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
+<header>
+    <ul>
+        <li><a class="logo_img" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Логотип"></a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</header>
 <body>
     {% block content %} {% endblock %}
 </body>
+<footer>
+        <div>
+            <ul class="ul-footer">
+                <li class="li-footer">
+                    <a href="https://t.me/Vekyn_n">telega</a>
+                </li>
+                <li>Портфолио</li>
+            </ul>
+        </div>
+</footer>
 </html>
