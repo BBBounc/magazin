@@ -6,7 +6,7 @@ from django.utils import timezone
 class Service(models.Model): 
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    price = models.DecimalField(max_digits=10, decimal_places=2)  
+    price = models.CharField(max_length=200)
 
     def __str__(self):
         return self.title
@@ -21,7 +21,13 @@ class Contacts(models.Model):
 class Portfolio(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    image = models.ImageField(upload_to ='uploads/') 
 
     def __str__(self):
         return self.name
+
+class PortfolioImage(models.Model):
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to='uploads/')
+
+    def __str__(self):
+        return f"{self.portfolio.name} - Image {self.id}"

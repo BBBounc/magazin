@@ -3,11 +3,10 @@
 {% block content %}
 <h1>Наши Услуги</h1>
 <ul>
-    {% for service in services %}
+    {% for portfolios in portfolio %}
         <li>
-            <h2>{{ service.title }}</h2>
-            <p>{{ service.description }}</p>
-            <p>Price: {{ service.price }}</p>
+            <h2 style="text-align: center; margin: 50px 0;">{{ portfolios.name }}</h2>
+            <p>{{ portfolios.description }}</p>
         </li>
     {% endfor %}
 </ul>

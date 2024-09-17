@@ -14,9 +14,9 @@
 <ul class="content_main_page">
     {% for service in services %}
         <li class="content_main_page_li">
-            <h2>{{ service.title }}</h2>
+            <h2 class="service-title">{{ service.title }}</h2>
             <p>{{ service.description }}</p>
-            <p>Price: {{ service.price }}</p>
+            <p>Цены: {{ service.price }}</p>
         </li>
     {% endfor %}
 </ul>
