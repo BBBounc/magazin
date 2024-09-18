@@ -7,25 +7,20 @@
     <title>{% block name %}
         {% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/logo.webp' %}"/>
 <!-- Lightbox CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-<!-- jQuery (необходим для Lightbox) -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </head>
 <header>
     <ul>
-        <li><a class="logo_img" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Логотип"></a></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="{% url 'home' %}"><img class="logo_img" src="{% static 'img/logo.webp' %}" alt="Логотип"></a></li>
     </ul>
 </header>
 <body>
     {% block content %} {% endblock %}
 </body>
 <footer>
+    <hr>
         <div>
             <ul class="ul-footer">
                 <li class="li-footer">
@@ -36,3 +31,6 @@
         </div>
 </footer>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>

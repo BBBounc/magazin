@@ -13,7 +13,6 @@
             <ul class="img_portfolio_pos">
                 {% for image in portfolio.images.all %}
                     <li class="img_portfolio_col">
-                        <!-- Ссылка на изображение с атрибутом data-lightbox -->
                         <a href="{{ image.image.url }}" data-lightbox="portfolio">
                             <img class="img_portfolio" src="{{ image.image.url }}" alt="{{ image }}" style="width: 100%; height: auto;">
                         </a>
@@ -25,20 +24,8 @@
 </ul>
 
 <script>
-// Отключение прокрутки страницы при открытии Lightbox
 lightbox.option({
-    'disableScrolling': true // Отключаем прокрутку
+    'disableScrolling': true
 });
 </script>
-
-<style>
-/* Стили для увеличения размера изображения в модальном окне */
-.lightbox img {
-    max-width: 95vw; /* Максимальная ширина 95% от ширины окна */
-    max-height: 95vh; /* Максимальная высота 95% от высоты окна */
-    width: auto; /* Автоматическая ширина */
-    height: auto; /* Автоматическая высота */
-}
-</style>
-
 {% endblock %}
