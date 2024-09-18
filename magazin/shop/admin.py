@@ -4,4 +4,4 @@ from .models import *
 admin.site.register(Service),
 admin.site.register(Contacts),
 admin.site.register(Portfolio),
-admin.site.register(PortfolioImage),
+admin.site.register(PortfolioImage)

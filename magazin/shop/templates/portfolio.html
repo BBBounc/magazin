@@ -1,16 +1,44 @@
 {% extends 'base.html' %}
 
+{% block name %}Портфолио{% endblock %}
+
 {% block content %}
-<h1>Наши Услуги</h1>
+<h1>Мое портфолио</h1>
 <ul>
-    {% for portfolios in portfolio %}
+    {% for portfolio in portfolios %}
         <li>
-            <h2 style="text-align: center; margin: 50px 0;">{{ portfolios.name }}</h2>
-            <p>{{ portfolios.description }}</p>
+            <h1 class="align_center">{{ portfolio.name }}</h1>
+            <p>{{ portfolio.description }}</p>
+
+            <ul class="img_portfolio_pos">
+                {% for image in portfolio.images.all %}
+                    <li class="img_portfolio_col">
+                        <!-- Ссылка на изображение с атрибутом data-lightbox -->
+                        <a href="{{ image.image.url }}" data-lightbox="portfolio">
+                            <img class="img_portfolio" src="{{ image.image.url }}" alt="{{ image }}" style="width: 100%; height: auto;">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </li>
     {% endfor %}
 </ul>
 
-  {% endblock %}
+<script>
+// Отключение прокрутки страницы при открытии Lightbox
+lightbox.option({
+    'disableScrolling': true // Отключаем прокрутку
+});
+</script>
 
+<style>
+/* Стили для увеличения размера изображения в модальном окне */
+.lightbox img {
+    max-width: 95vw; /* Максимальная ширина 95% от ширины окна */
+    max-height: 95vh; /* Максимальная высота 95% от высоты окна */
+    width: auto; /* Автоматическая ширина */
+    height: auto; /* Автоматическая высота */
+}
+</style>
 
+{% endblock %}

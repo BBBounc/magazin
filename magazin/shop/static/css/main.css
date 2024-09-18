@@ -114,3 +114,22 @@ a{
     text-transform: uppercase;
     font-size: 28px;
 }
+.portfolio-name{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.img_portfolio_pos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    margin: 0;
+}
+.img_portfolio{
+    max-height: 400px;
+}
+.img_portfolio_col{
+    margin: 30px;
+    padding: 20px;
+}
